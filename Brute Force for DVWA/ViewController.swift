@@ -8,7 +8,9 @@
 import Cocoa
 
 class ViewController: NSViewController {
-
+    
+    @IBOutlet weak var aaa: NSTextField!
+    
     @IBAction func getTapped(_ sender: NSButton) {
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
         
@@ -35,7 +37,7 @@ class ViewController: NSViewController {
         let parameters = ["Username": "hutr0", "Message": "Fuck u!"]
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type") 
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else { return }
         request.httpBody = httpBody
         
@@ -55,5 +57,23 @@ class ViewController: NSViewController {
             }
         }.resume()
     }
-}
+    
+    @IBAction func getDVWATapped(_ sender: NSButton) {
+        guard let url = URL(string: "http://localhost/dvwa/vulnerabilities/brute/?username=1&password=1&Login=Login") else { return }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.addValue("security=low; PHPSESSID=gvcpg0286vsfnal862hl4uks4j", forHTTPHeaderField: "Cookie")
+        request.addValue("text/html", forHTTPHeaderField: "Content-Type")
 
+        let session = URLSession.shared
+        session.dataTask(with: request) { data, response, error in
+            if let response = response {
+                print(response)
+            }
+
+            guard let data = data, let html = String(data: data, encoding: .utf8) else { return }
+            print(html)
+        }.resume()
+    }
+}

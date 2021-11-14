@@ -10,34 +10,79 @@
             <objects>
                 <viewController title="Brute Force" id="gzP-uC-rTy" customClass="ViewController" customModule="Brute_Force_for_DVWA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="ZXs-GV-ZEr">
-                        <rect key="frame" x="0.0" y="0.0" width="110" height="70"/>
+                        <rect key="frame" x="0.0" y="0.0" width="305" height="211"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qcc-9b-CtC">
-                                <rect key="frame" x="0.0" y="0.0" width="110" height="70"/>
+                            <stackView distribution="fillEqually" orientation="horizontal" alignment="centerY" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yhd-Sb-wl3">
+                                <rect key="frame" x="0.0" y="0.0" width="305" height="211"/>
                                 <subviews>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XB7-Ru-pCU" userLabel="GET">
-                                        <rect key="frame" x="25" y="33" width="60" height="32"/>
-                                        <buttonCell key="cell" type="push" title="GET" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ggf-2z-W8q">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="getTapped:" target="gzP-uC-rTy" id="Pgb-dK-g5I"/>
-                                        </connections>
-                                    </button>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mGg-al-8aN" userLabel="POST">
-                                        <rect key="frame" x="21" y="3" width="69" height="32"/>
-                                        <buttonCell key="cell" type="push" title="POST" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZJR-YZ-2HT">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="postTapped:" target="gzP-uC-rTy" id="T3k-6s-ASz"/>
-                                        </connections>
-                                    </button>
+                                    <stackView distribution="fillEqually" orientation="vertical" alignment="centerX" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qcc-9b-CtC">
+                                        <rect key="frame" x="0.0" y="71" width="148" height="70"/>
+                                        <subviews>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XB7-Ru-pCU" userLabel="GET">
+                                                <rect key="frame" x="44" y="33" width="60" height="32"/>
+                                                <buttonCell key="cell" type="push" title="GET" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ggf-2z-W8q">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="getTapped:" target="gzP-uC-rTy" id="Pgb-dK-g5I"/>
+                                                </connections>
+                                            </button>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mGg-al-8aN" userLabel="POST">
+                                                <rect key="frame" x="39" y="3" width="69" height="32"/>
+                                                <buttonCell key="cell" type="push" title="POST" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZJR-YZ-2HT">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="postTapped:" target="gzP-uC-rTy" id="T3k-6s-ASz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <edgeInsets key="edgeInsets" left="0.0" right="0.0" top="10" bottom="10"/>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                    <stackView distribution="fillEqually" orientation="vertical" alignment="centerX" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w4b-Ao-Qfe">
+                                        <rect key="frame" x="158" y="73" width="147" height="66"/>
+                                        <subviews>
+                                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Sus-id-vjP">
+                                                <rect key="frame" x="27" y="40" width="92" height="16"/>
+                                                <textFieldCell key="cell" selectable="YES" title="Multiline Label" id="gPF-Og-cYc">
+                                                    <font key="font" metaFont="system"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pIP-kb-hWE" userLabel="GET">
+                                                <rect key="frame" x="-6" y="3" width="158" height="32"/>
+                                                <buttonCell key="cell" type="push" title="GetRequestToDVWA" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MiL-5h-XS7">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="getDVWATapped:" target="gzP-uC-rTy" id="Xzq-RC-H5t"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <edgeInsets key="edgeInsets" left="0.0" right="0.0" top="10" bottom="10"/>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
                                 </subviews>
-                                <edgeInsets key="edgeInsets" left="0.0" right="0.0" top="10" bottom="10"/>
                                 <visibilityPriorities>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
@@ -49,16 +94,19 @@
                             </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="qcc-9b-CtC" secondAttribute="bottom" id="JVL-74-3HH"/>
-                            <constraint firstItem="qcc-9b-CtC" firstAttribute="leading" secondItem="ZXs-GV-ZEr" secondAttribute="leading" id="JhO-EN-MLU"/>
-                            <constraint firstAttribute="trailing" secondItem="qcc-9b-CtC" secondAttribute="trailing" id="M8B-HB-JRA"/>
-                            <constraint firstItem="qcc-9b-CtC" firstAttribute="top" secondItem="ZXs-GV-ZEr" secondAttribute="top" id="cVT-Rx-obm"/>
+                            <constraint firstItem="yhd-Sb-wl3" firstAttribute="top" secondItem="ZXs-GV-ZEr" secondAttribute="top" id="DzF-nc-koF"/>
+                            <constraint firstItem="yhd-Sb-wl3" firstAttribute="leading" secondItem="ZXs-GV-ZEr" secondAttribute="leading" id="Gbp-85-NLE"/>
+                            <constraint firstAttribute="trailing" secondItem="yhd-Sb-wl3" secondAttribute="trailing" id="ePv-O3-Kea"/>
+                            <constraint firstAttribute="bottom" secondItem="yhd-Sb-wl3" secondAttribute="bottom" id="njI-jt-tIP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="aaa" destination="Sus-id-vjP" id="BYU-qD-H7u"/>
+                    </connections>
                 </viewController>
                 <customObject id="WMb-20-3dp" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="101" y="214"/>
+            <point key="canvasLocation" x="119.5" y="223"/>
         </scene>
     </scenes>
 </document>
