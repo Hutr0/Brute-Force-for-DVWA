@@ -10,17 +10,17 @@
             <objects>
                 <viewController title="Brute Force" id="gzP-uC-rTy" customClass="ViewController" customModule="Brute_Force_for_DVWA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="ZXs-GV-ZEr">
-                        <rect key="frame" x="0.0" y="0.0" width="326" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="889" height="512"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yhd-Sb-wl3">
-                                <rect key="frame" x="0.0" y="0.0" width="326" height="270"/>
+                                <rect key="frame" x="0.0" y="0.0" width="889" height="512"/>
                                 <subviews>
                                     <stackView distribution="fillEqually" orientation="vertical" alignment="centerX" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qcc-9b-CtC">
-                                        <rect key="frame" x="10" y="100" width="56" height="70"/>
+                                        <rect key="frame" x="10" y="221" width="55" height="70"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XB7-Ru-pCU" userLabel="GET">
-                                                <rect key="frame" x="-2" y="33" width="60" height="32"/>
+                                                <rect key="frame" x="-7" y="33" width="69" height="32"/>
                                                 <buttonCell key="cell" type="push" title="GET" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ggf-2z-W8q">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
@@ -30,7 +30,7 @@
                                                 </connections>
                                             </button>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mGg-al-8aN" userLabel="POST">
-                                                <rect key="frame" x="-6" y="3" width="69" height="32"/>
+                                                <rect key="frame" x="-7" y="3" width="69" height="32"/>
                                                 <buttonCell key="cell" type="push" title="POST" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZJR-YZ-2HT">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
@@ -41,6 +41,9 @@
                                             </button>
                                         </subviews>
                                         <edgeInsets key="edgeInsets" left="0.0" right="0.0" top="10" bottom="10"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="XB7-Ru-pCU" secondAttribute="width" id="feG-zy-nYo"/>
+                                        </constraints>
                                         <visibilityPriorities>
                                             <integer value="1000"/>
                                             <integer value="1000"/>
@@ -51,10 +54,10 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w4b-Ao-Qfe">
-                                        <rect key="frame" x="76" y="85" width="240" height="100"/>
+                                        <rect key="frame" x="75" y="191" width="804" height="130"/>
                                         <subviews>
                                             <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hER-n2-DVX">
-                                                <rect key="frame" x="0.0" y="40" width="240" height="50"/>
+                                                <rect key="frame" x="282" y="70" width="240" height="50"/>
                                                 <clipView key="contentView" drawsBackground="NO" id="12l-qN-paO">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,14 +82,24 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
                                             </scrollView>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pIP-kb-hWE" userLabel="DVWA">
-                                                <rect key="frame" x="41" y="3" width="158" height="32"/>
-                                                <buttonCell key="cell" type="push" title="GetRequestToDVWA" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MiL-5h-XS7">
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ydW-w5-lqG" userLabel="DVWA">
+                                                <rect key="frame" x="323" y="33" width="158" height="32"/>
+                                                <buttonCell key="cell" type="push" title="GetRequestToDVWA" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0No-Nm-9fp">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
                                                 <connections>
-                                                    <action selector="getDVWATapped:" target="gzP-uC-rTy" id="Xzq-RC-H5t"/>
+                                                    <action selector="getDVWATapped:" target="gzP-uC-rTy" id="Trz-2Q-xfC"/>
+                                                </connections>
+                                            </button>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pIP-kb-hWE" userLabel="incorrect">
+                                                <rect key="frame" x="331" y="3" width="143" height="32"/>
+                                                <buttonCell key="cell" type="push" title="Check &quot;incorrect&quot;" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MiL-5h-XS7">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="checkInvalidityAutorizationTapped:" target="gzP-uC-rTy" id="VZa-Sx-Gua"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -94,8 +107,10 @@
                                         <visibilityPriorities>
                                             <integer value="1000"/>
                                             <integer value="1000"/>
+                                            <integer value="1000"/>
                                         </visibilityPriorities>
                                         <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                         </customSpacing>
@@ -125,7 +140,7 @@
                 </viewController>
                 <customObject id="WMb-20-3dp" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="119.5" y="223"/>
+            <point key="canvasLocation" x="277.5" y="348"/>
         </scene>
     </scenes>
 </document>

@@ -26,13 +26,6 @@ class ViewController: NSViewController {
             DispatchQueue.main.async {
                 self.textField.string = json
             }
-            
-//            do {
-//                let json = try JSONSerialization.jsonObject(with: data, options: [])
-//
-//            } catch {
-//                print(error.localizedDescription)
-//            }
         }.resume()
     }
     
@@ -56,15 +49,6 @@ class ViewController: NSViewController {
             DispatchQueue.main.async {
                 self.textField.string = json
             }
-            
-//            do {
-//                let json = try JSONSerialization.jsonObject(with: data, options: [])
-//                DispatchQueue.main.async {
-//                    self.textField.string = json
-//                }
-//            } catch {
-//                print(error.localizedDescription)
-//            }
         }.resume()
     }
     
@@ -84,6 +68,32 @@ class ViewController: NSViewController {
             DispatchQueue.main.async {
                 self.textField.string = html
             }
+        }.resume()
+    }
+    
+    @IBAction func checkInvalidityAutorizationTapped(_ sender: NSButton) {
+        guard let url = URL(string: "http://localhost/dvwa/vulnerabilities/brute/?username=1&password=1&Login=Login") else { return }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.addValue("security=low; PHPSESSID=gvcpg0286vsfnal862hl4uks4j", forHTTPHeaderField: "Cookie")
+        request.addValue("text/html", forHTTPHeaderField: "Content-Type")
+
+        let session = URLSession.shared
+        session.dataTask(with: request) { data, response, error in
+            
+            guard let data = data, let html = String(data: data, encoding: .utf8) else { return }
+            print(html)
+            if html.contains("incorrect") {
+                DispatchQueue.main.async {
+                    self.textField.string = "incorrect"
+                }
+            } else {
+                DispatchQueue.main.async {
+                    self.textField.string = html
+                }
+            }
+            
         }.resume()
     }
 }
