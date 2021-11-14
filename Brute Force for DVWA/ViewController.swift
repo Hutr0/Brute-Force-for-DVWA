@@ -9,7 +9,7 @@ import Cocoa
 
 class ViewController: NSViewController {
     
-    @IBOutlet weak var aaa: NSTextField!
+    @IBOutlet var textField: NSTextView!
     
     @IBAction func getTapped(_ sender: NSButton) {
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
@@ -20,15 +20,19 @@ class ViewController: NSViewController {
                 print(response)
             }
             
-            guard let data = data else { return }
+            guard let data = data, let json = String(data: data, encoding: .utf8) else { return }
             print(data)
             
-            do {
-                let json = try JSONSerialization.jsonObject(with: data, options: [])
-                print(json)
-            } catch {
-                print(error.localizedDescription)
+            DispatchQueue.main.async {
+                self.textField.string = json
             }
+            
+//            do {
+//                let json = try JSONSerialization.jsonObject(with: data, options: [])
+//
+//            } catch {
+//                print(error.localizedDescription)
+//            }
         }.resume()
     }
     
@@ -46,15 +50,21 @@ class ViewController: NSViewController {
                 print(response)
             }
             
-            guard let data = data else { return }
+            guard let data = data, let json = String(data: data, encoding: .utf8) else { return }
             print(data)
             
-            do {
-                let json = try JSONSerialization.jsonObject(with: data, options: [])
-                print(json)
-            } catch {
-                print(error.localizedDescription)
+            DispatchQueue.main.async {
+                self.textField.string = json
             }
+            
+//            do {
+//                let json = try JSONSerialization.jsonObject(with: data, options: [])
+//                DispatchQueue.main.async {
+//                    self.textField.string = json
+//                }
+//            } catch {
+//                print(error.localizedDescription)
+//            }
         }.resume()
     }
     
@@ -68,12 +78,12 @@ class ViewController: NSViewController {
 
         let session = URLSession.shared
         session.dataTask(with: request) { data, response, error in
-            if let response = response {
-                print(response)
-            }
-
+            
             guard let data = data, let html = String(data: data, encoding: .utf8) else { return }
             print(html)
+            DispatchQueue.main.async {
+                self.textField.string = html
+            }
         }.resume()
     }
 }
