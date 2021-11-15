@@ -12,6 +12,7 @@ class ViewController: NSViewController {
     @IBOutlet var textField: NSTextView!
     @IBOutlet weak var userNamesPath: NSTextField!
     @IBOutlet weak var passwordsPath: NSTextField!
+    @IBOutlet weak var onlyTrueChecked: NSButton!
     
     @IBAction func getTapped(_ sender: NSButton) {
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
@@ -137,6 +138,12 @@ class ViewController: NSViewController {
                     if !html.contains("incorrect") {
                         DispatchQueue.main.async {
                             self.textField.string += "\(user):\(password) - True\n"
+                        }
+                    } else {
+                        DispatchQueue.main.async {
+                            if self.onlyTrueChecked.state.rawValue == 0 {
+                                self.textField.string += "\(user):\(password) - False\n"
+                            }
                         }
                     }
                 }.resume()
