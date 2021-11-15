@@ -12,6 +12,7 @@ class ViewController: NSViewController {
     @IBOutlet var textField: NSTextView!
     @IBOutlet weak var userNamesPath: NSTextField!
     @IBOutlet weak var passwordsPath: NSTextField!
+    @IBOutlet weak var phpSessionID: NSTextField!
     @IBOutlet weak var onlyTrueChecked: NSButton!
     
     @IBAction func startBruteForce(_ sender: NSButton) {
@@ -37,7 +38,7 @@ class ViewController: NSViewController {
         
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        request.addValue("security=low; PHPSESSID=gvcpg0286vsfnal862hl4uks4j", forHTTPHeaderField: "Cookie")
+        request.addValue("security=low; PHPSESSID=\(phpSessionID.stringValue)", forHTTPHeaderField: "Cookie")
         request.addValue("text/html", forHTTPHeaderField: "Content-Type")
         
         let session = URLSession.shared

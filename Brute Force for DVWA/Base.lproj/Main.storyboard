@@ -17,10 +17,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="530" height="520"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="40" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qcc-9b-CtC">
-                                        <rect key="frame" x="10" y="125" width="200" height="270"/>
+                                        <rect key="frame" x="10" y="82" width="200" height="357"/>
                                         <subviews>
                                             <stackView distribution="fillEqually" orientation="vertical" alignment="leading" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G2q-hn-ygw">
-                                                <rect key="frame" x="0.0" y="213" width="200" height="47"/>
+                                                <rect key="frame" x="0.0" y="300" width="200" height="47"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tsa-Me-AuK">
                                                         <rect key="frame" x="-2" y="31" width="162" height="16"/>
@@ -52,7 +52,7 @@
                                                 </customSpacing>
                                             </stackView>
                                             <stackView distribution="fillEqually" orientation="vertical" alignment="leading" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="piN-zs-OVs">
-                                                <rect key="frame" x="0.0" y="126" width="200" height="47"/>
+                                                <rect key="frame" x="0.0" y="213" width="200" height="47"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MUF-hg-p7x">
                                                         <rect key="frame" x="-2" y="31" width="141" height="16"/>
@@ -68,6 +68,38 @@
                                                             <constraint firstAttribute="width" constant="200" id="qGc-F2-ksU"/>
                                                         </constraints>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="elq-Eh-wZY">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                                <visibilityPriorities>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                </visibilityPriorities>
+                                                <customSpacing>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                </customSpacing>
+                                            </stackView>
+                                            <stackView distribution="fillEqually" orientation="vertical" alignment="leading" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7MU-Cu-TcM">
+                                                <rect key="frame" x="0.0" y="126" width="200" height="47"/>
+                                                <subviews>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="atf-Ml-kmt">
+                                                        <rect key="frame" x="-2" y="31" width="134" height="16"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Enter a phpSessionID" id="IC0-T3-jsD">
+                                                            <font key="font" usesAppearanceFont="YES"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6gg-qx-rzS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="200" id="np7-52-0KP"/>
+                                                        </constraints>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="hdF-ey-NQh">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -107,12 +139,14 @@
                                             <constraint firstAttribute="width" secondItem="97d-CY-VVk" secondAttribute="width" id="5t2-RV-pjl"/>
                                         </constraints>
                                         <visibilityPriorities>
-                                            <real value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
                                             <integer value="1000"/>
                                             <integer value="1000"/>
                                             <integer value="1000"/>
                                         </visibilityPriorities>
                                         <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
@@ -174,6 +208,7 @@
                     <connections>
                         <outlet property="onlyTrueChecked" destination="Fjw-zt-dqb" id="Eed-fJ-EGb"/>
                         <outlet property="passwordsPath" destination="ENg-1g-EfH" id="oZ7-fO-gxI"/>
+                        <outlet property="phpSessionID" destination="6gg-qx-rzS" id="nU8-xO-TMk"/>
                         <outlet property="textField" destination="T7t-iW-dbK" id="sMT-8w-Be6"/>
                         <outlet property="userNamesPath" destination="97d-CY-VVk" id="rTV-Ly-VVF"/>
                     </connections>
