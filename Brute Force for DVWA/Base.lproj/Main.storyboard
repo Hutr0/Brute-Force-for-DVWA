@@ -10,14 +10,14 @@
             <objects>
                 <viewController title="Brute Force" id="gzP-uC-rTy" customClass="ViewController" customModule="Brute_Force_for_DVWA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="ZXs-GV-ZEr">
-                        <rect key="frame" x="0.0" y="0.0" width="889" height="512"/>
+                        <rect key="frame" x="0.0" y="0.0" width="530" height="520"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yhd-Sb-wl3">
-                                <rect key="frame" x="0.0" y="0.0" width="889" height="512"/>
+                                <rect key="frame" x="0.0" y="0.0" width="530" height="520"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="40" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qcc-9b-CtC">
-                                        <rect key="frame" x="10" y="121" width="200" height="270"/>
+                                        <rect key="frame" x="10" y="125" width="200" height="270"/>
                                         <subviews>
                                             <stackView distribution="fillEqually" orientation="vertical" alignment="leading" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G2q-hn-ygw">
                                                 <rect key="frame" x="0.0" y="213" width="200" height="47"/>
@@ -119,94 +119,41 @@
                                             <real value="3.4028234663852886e+38"/>
                                         </customSpacing>
                                     </stackView>
-                                    <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w4b-Ao-Qfe">
-                                        <rect key="frame" x="220" y="161" width="659" height="190"/>
-                                        <subviews>
-                                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hER-n2-DVX">
-                                                <rect key="frame" x="210" y="130" width="240" height="50"/>
-                                                <clipView key="contentView" drawsBackground="NO" id="12l-qN-paO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="50"/>
+                                    <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hER-n2-DVX">
+                                        <rect key="frame" x="220" y="10" width="300" height="500"/>
+                                        <clipView key="contentView" drawsBackground="NO" id="12l-qN-paO">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="500"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <textView editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="T7t-iW-dbK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="500"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                    <subviews>
-                                                        <textView editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="T7t-iW-dbK">
-                                                            <rect key="frame" x="0.0" y="0.0" width="240" height="50"/>
-                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                            <size key="minSize" width="240" height="50"/>
-                                                            <size key="maxSize" width="1728" height="10000000"/>
-                                                            <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                        </textView>
-                                                    </subviews>
-                                                </clipView>
-                                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="uoB-Kg-CNf">
-                                                    <rect key="frame" x="-100" y="-100" width="240" height="16"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </scroller>
-                                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="YG7-Io-RNL">
-                                                    <rect key="frame" x="224" y="0.0" width="16" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </scroller>
-                                            </scrollView>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XB7-Ru-pCU" userLabel="GET">
-                                                <rect key="frame" x="300" y="93" width="60" height="32"/>
-                                                <buttonCell key="cell" type="push" title="GET" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ggf-2z-W8q">
-                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" metaFont="system"/>
-                                                </buttonCell>
-                                                <connections>
-                                                    <action selector="getTapped:" target="gzP-uC-rTy" id="Pgb-dK-g5I"/>
-                                                </connections>
-                                            </button>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mGg-al-8aN" userLabel="POST">
-                                                <rect key="frame" x="295" y="63" width="69" height="32"/>
-                                                <buttonCell key="cell" type="push" title="POST" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZJR-YZ-2HT">
-                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" metaFont="system"/>
-                                                </buttonCell>
-                                                <connections>
-                                                    <action selector="postTapped:" target="gzP-uC-rTy" id="T3k-6s-ASz"/>
-                                                </connections>
-                                            </button>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ydW-w5-lqG" userLabel="DVWA">
-                                                <rect key="frame" x="251" y="33" width="158" height="32"/>
-                                                <buttonCell key="cell" type="push" title="GetRequestToDVWA" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0No-Nm-9fp">
-                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" metaFont="system"/>
-                                                </buttonCell>
-                                                <connections>
-                                                    <action selector="getDVWATapped:" target="gzP-uC-rTy" id="Trz-2Q-xfC"/>
-                                                </connections>
-                                            </button>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pIP-kb-hWE" userLabel="incorrect">
-                                                <rect key="frame" x="258" y="3" width="143" height="32"/>
-                                                <buttonCell key="cell" type="push" title="Check &quot;incorrect&quot;" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MiL-5h-XS7">
-                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" metaFont="system"/>
-                                                </buttonCell>
-                                                <connections>
-                                                    <action selector="checkInvalidityAutorizationTapped:" target="gzP-uC-rTy" id="VZa-Sx-Gua"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <edgeInsets key="edgeInsets" left="0.0" right="0.0" top="10" bottom="10"/>
-                                        <visibilityPriorities>
-                                            <integer value="1000"/>
-                                            <integer value="1000"/>
-                                            <integer value="1000"/>
-                                            <integer value="1000"/>
-                                            <integer value="1000"/>
-                                        </visibilityPriorities>
-                                        <customSpacing>
-                                            <real value="3.4028234663852886e+38"/>
-                                            <real value="3.4028234663852886e+38"/>
-                                            <real value="3.4028234663852886e+38"/>
-                                            <real value="3.4028234663852886e+38"/>
-                                            <real value="3.4028234663852886e+38"/>
-                                        </customSpacing>
-                                    </stackView>
+                                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    <size key="minSize" width="300" height="500"/>
+                                                    <size key="maxSize" width="1728" height="10000000"/>
+                                                    <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                </textView>
+                                            </subviews>
+                                        </clipView>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="dVe-a9-Uwg"/>
+                                        </constraints>
+                                        <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="uoB-Kg-CNf">
+                                            <rect key="frame" x="-100" y="-100" width="240" height="16"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                        <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="YG7-Io-RNL">
+                                            <rect key="frame" x="284" y="0.0" width="16" height="500"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                    </scrollView>
                                 </subviews>
                                 <edgeInsets key="edgeInsets" left="10" right="10" top="0.0" bottom="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="hER-n2-DVX" secondAttribute="bottom" constant="10" id="n4Q-Lv-Clv"/>
+                                    <constraint firstItem="hER-n2-DVX" firstAttribute="top" secondItem="yhd-Sb-wl3" secondAttribute="top" constant="10" id="ufI-ql-OGb"/>
+                                </constraints>
                                 <visibilityPriorities>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
@@ -233,7 +180,7 @@
                 </viewController>
                 <customObject id="WMb-20-3dp" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="277.5" y="348"/>
+            <point key="canvasLocation" x="277" y="220"/>
         </scene>
     </scenes>
 </document>
