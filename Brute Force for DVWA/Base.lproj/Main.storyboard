@@ -17,8 +17,23 @@
                                 <rect key="frame" x="0.0" y="0.0" width="530" height="520"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="40" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qcc-9b-CtC">
-                                        <rect key="frame" x="10" y="82" width="200" height="357"/>
+                                        <rect key="frame" x="10" y="52" width="200" height="416"/>
                                         <subviews>
+                                            <comboBox verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sZC-XE-cg9">
+                                                <rect key="frame" x="0.0" y="383" width="203" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="U0A-Rg-GpB"/>
+                                                </constraints>
+                                                <comboBoxCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title="dvwa" drawsBackground="YES" numberOfVisibleItems="2" id="0Cw-G3-EG3">
+                                                    <font key="font" metaFont="system"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    <objectValues>
+                                                        <string>dvwa</string>
+                                                        <string>dvwa_2</string>
+                                                    </objectValues>
+                                                </comboBoxCell>
+                                            </comboBox>
                                             <stackView distribution="fillEqually" orientation="vertical" alignment="leading" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G2q-hn-ygw">
                                                 <rect key="frame" x="0.0" y="300" width="200" height="47"/>
                                                 <subviews>
@@ -144,8 +159,10 @@
                                             <integer value="1000"/>
                                             <integer value="1000"/>
                                             <integer value="1000"/>
+                                            <integer value="1000"/>
                                         </visibilityPriorities>
                                         <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
@@ -206,6 +223,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dvwaVersion" destination="sZC-XE-cg9" id="dF9-Zz-0Kk"/>
                         <outlet property="onlyTrueChecked" destination="Fjw-zt-dqb" id="Eed-fJ-EGb"/>
                         <outlet property="passwordsPath" destination="ENg-1g-EfH" id="oZ7-fO-gxI"/>
                         <outlet property="phpSessionID" destination="6gg-qx-rzS" id="nU8-xO-TMk"/>
@@ -215,7 +233,7 @@
                 </viewController>
                 <customObject id="WMb-20-3dp" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="277" y="220"/>
+            <point key="canvasLocation" x="55" y="210"/>
         </scene>
     </scenes>
 </document>

